@@ -1,0 +1,784 @@
+focus_tree = {
+	id = JMG_FOCUS
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = JMG
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 5000 }
+
+# начальное древо
+focus = {
+id = JMG_another_year
+icon = GFX_focus_ETH_support_from_the_japanese_communists
+cost = 1
+x = 7
+y = 2
+completion_reward = { 
+add_political_power = 25
+country_event = { id = jmg.1 days = 1 random = 100 } 
+}
+}
+
+focus = {
+id = JMG_get_down_with_business
+icon = GFX_focus_SWI_embrace_rote_drei
+cost = 10
+prerequisite = {
+focus = JMG_another_year
+}
+x = 7
+y = 3
+completion_reward = {
+country_event = { id = jmg.2 days = 10 random = 100 }
+country_event = { id = jmg.3 days = 20 random = 100 }
+} 
+}
+
+focus = {
+id = JMG_no_guns_no_people
+icon = GFX_focus_prc_infiltration
+cost = 10
+prerequisite = {
+focus = JMG_get_down_with_business
+}
+x = 3
+y = 4
+completion_reward = {
+country_event = { id = jmg.4 days = 5 random = 100 }
+}
+}
+
+focus = {
+id = JMG_military_disciplina
+icon = GFX_focus_FIN_parmis_devils
+cost = 15
+prerequisite = {
+focus = JMG_no_guns_no_people
+}
+x = 1
+y = 5
+completion_reward = { 
+army_experience = 15
+add_ideas = { jaymayide6 }
+country_event = { id = jmg.5 days = 5 random = 100 }
+}
+}
+
+focus = {
+id = JMG_deal_with_organized_crime
+icon = GFX_focus_SWE_bofors_fly_swatter
+cost = 12
+prerequisite = {
+focus = JMG_no_guns_no_people
+}
+x = 3
+y = 5
+completion_reward = { 
+country_event = {id = jmg.6 days = 5 random = 100 }
+}
+}
+
+focus = {
+id = JMG_get_guns
+icon = GFX_focus_SWI_issue_war_bonds
+cost = 10
+prerequisite = {
+focus = JMG_no_guns_no_people
+}
+x = 5
+y = 5
+completion_reward = {
+add_political_power = 100
+}
+}
+
+focus = {
+id = JMG_fresh_papers
+icon = GFX_focus_TUR_ratify_the_six_arrows
+cost = 8
+prerequisite = {
+focus = JMG_military_disciplina
+}
+x = 1
+y = 6
+completion_reward = {
+
+add_war_support = 0.2
+add_stability = 0.05
+
+country_event = { id = jmg.8 days = 1 random = 100 }
+}
+}
+
+focus = {
+id = JMG_dop_agitate
+icon = GFX_focus_SOV_mobilization_plan
+cost = 8
+prerequisite = {
+focus = JMG_deal_with_organized_crime
+}
+x = 3
+y = 6
+completion_reward = {
+add_ideas = {
+extensive_conscription
+}
+add_war_support = 0.2
+add_stability = -0.1
+}
+}
+
+focus = {
+id = JMG_equip_the_guys
+icon = GFX_focus_NOR_approach_kretsen
+cost = 10
+prerequisite = {
+focus = JMG_get_guns
+}
+x = 5
+y = 6
+completion_reward = {
+add_manpower = -7000
+add_equipment_to_stockpile = {
+type = infantry_equipment_1
+amount = -700
+}
+
+random_owned_controlled_state = {
+				create_unit = { 
+					division = "name = \"1. Prizivniki\" division_template = \"Jey Army\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"2. Prizivniki\" division_template = \"Jey Army\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"3. Prizivniki\" division_template = \"Jey Army\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"4. Prizivniki\" division_template = \"Jey Army\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"5. Prizivniki\" division_template = \"Jey Army\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"6. Prizivniki\" division_template = \"Jey Army\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"7. Prizivniki\" division_template = \"Jey Army\" start_experience_factor = 0.1" 
+					owner = ROOT
+				}
+}
+}
+}
+
+focus = {
+id = JMG_for_homeless
+icon = GFX_focus_generic_industry_2
+cost = 12
+prerequisite = {
+focus = JMG_get_down_with_business
+}
+x = 9
+y = 4
+completion_reward = {
+
+random_owned_state = {
+limit = { 
+is_core_of = ROOT 				
+}
+add_building_construction = {
+type = infrastructure
+level = 1
+instant_build = yes
+}	
+}
+
+random_owned_state = {
+limit = { 
+is_core_of = ROOT 				
+}
+add_building_construction = {
+type = infrastructure
+level = 1
+instant_build = yes
+}	
+}
+
+random_owned_state = {
+limit = { 
+is_core_of = ROOT 				
+}
+add_building_construction = {
+type = infrastructure
+level = 1
+instant_build = yes
+}	
+}
+add_ideas = {
+jaymayide4
+}
+
+}
+}
+
+focus = {
+id = JMG_clear_streets
+icon = GFX_focus_generic_truck
+cost = 10
+prerequisite = {
+focus = JMG_get_down_with_business
+}
+x = 11
+y = 4
+completion_reward = {
+add_ideas = {
+jaymayide3
+}
+
+}
+}
+
+focus = {
+id = JMG_corruption
+icon = GFX_focus_ITA_alcide_de_gasperi
+cost = 10
+prerequisite = {
+focus = JMG_get_down_with_business
+}
+x = 13
+y = 4
+completion_reward = {
+unlock_decision_category_tooltip = JMG_corruption_categories
+}
+}
+
+focus = {
+id = JMG_new_rails
+icon = GFX_goal_generic_construct_infrastructure
+cost = 12
+prerequisite = {
+focus = JMG_clear_streets
+}
+x = 11
+y = 5
+completion_reward = {
+
+build_railway = {
+path = {11504 511 9479 9463 11437} 
+}
+
+build_railway = {
+path = {3686 705 3722 568 737 3573 588 11405} 
+}
+
+build_railway = {
+path = {3492 9449 418} 
+}
+
+build_railway = {
+path = {11397 3557 11504} 
+}
+
+add_tech_bonus = {
+bonus = 0.5
+uses = 1
+category = construction_tech
+}
+}
+}
+
+focus = {
+id = JMG_how_with_money
+icon = GFX_focus_bss_who_will_know
+cost = 13
+prerequisite = {
+focus = JMG_corruption
+}
+x = 13
+y = 5
+completion_reward = {
+
+}
+}
+
+focus = {
+id = JMG_finally
+icon = GFX_focus_generic_self_management
+cost = 5
+prerequisite = {
+focus = JMG_for_homeless
+}
+prerequisite = {
+focus = JMG_new_rails
+}
+prerequisite = {
+focus = JMG_how_with_money
+}
+x = 11
+y = 6
+completion_reward = {
+add_ideas = {
+jaymayide5
+}
+}
+}
+
+focus = { #тут надо добавить шоб убиралась жмгайдия2 потомуша иначе пиздец
+id = JMG_lotus
+icon = GFX_focus_focus_fra_orleans_restoration
+cost = 10
+prerequisite = {
+focus = JMG_fresh_papers
+}
+prerequisite = {
+focus = JMG_dop_agitate
+}
+prerequisite = {
+focus = JMG_equip_the_guys
+}
+prerequisite = {
+focus = JMG_finally
+}
+x = 7
+y = 7
+
+completion_reward = {
+add_ideas = {
+jaymayide1
+}
+add_research_slot = 1
+}
+}
+
+####################################
+#древо с сво на территории флюшриха#
+####################################
+
+focus = {
+id = JMG_small_evil
+icon = GFX_goal_unknown
+cost = 10
+prerequisite = {
+focus = JMG_lotus
+}
+x = 9
+y = 9
+}
+
+focus = {
+id = JMG_plane_with_leaflets
+icon = GFX_goal_unknown
+cost = 8
+prerequisite = {
+focus = JMG_small_evil
+}
+x = 7
+y = 10
+}
+
+focus = {
+id = JMG_reques_bullets
+icon = GFX_goal_unknown
+cost = 8
+prerequisite = {
+focus = JMG_small_evil
+}
+x = 11
+y = 10
+}
+
+############
+#по мирняку#
+############
+
+focus = {
+id = JMG_plan_yellow_angel
+icon = GFX_focus_SWI_promote_henne
+cost = 10
+prerequisite = {
+focus = JMG_plane_with_leaflets
+}
+mutually_exclusive = {
+focus = JMG_plan_black_devil
+}
+x = 7
+y = 11
+}
+
+focus = {
+id = JMG_integration
+icon = GFX_goal_unknown
+cost = 5
+prerequisite = {
+focus  = JMG_plan_yellow_angel
+}
+x = 7
+y = 12
+}
+
+focus = {
+id = JMG_yellow_compel
+icon = GFX_goal_unknown
+cost = 12
+prerequisite = {
+focus = JMG_integration
+}
+mutually_exclusive = {
+focus = JMG_yellow_concessions
+}
+x = 6
+y = 13
+}
+
+focus = {
+id = JMG_yellow_concessions
+icon = GFX_goal_unknown
+cost = 12
+prerequisite = {
+focus = JMG_integration
+}
+mutually_exclusive = {
+focus = JMG_yellow_compel
+}
+x = 8
+y = 13
+}
+
+focus = {
+id = JMG_peace_friendship_jeymaygone
+icon = GFX_goal_unknown
+cost = 7 
+prerequisite = {
+focus = JMG_yellow_compel
+focus = JMG_yellow_concessions
+}
+x = 7
+y = 14
+}
+
+############
+#по захвату#
+############
+
+focus = {
+id = JMG_plan_black_devil
+icon = GFX_focus_SWI_recall_robert_tobler
+cost = 10
+prerequisite = {
+focus = JMG_reques_bullets
+}
+mutually_exclusive = {
+focus = JMG_plan_yellow_angel
+}
+x = 11
+y = 11
+}
+
+focus = {
+id = JMG_make_devers_groups
+icon = GFX_goal_unknown
+cost = 5
+prerequisite = {
+focus = JMG_plan_black_devil
+}
+x = 10
+y = 12
+}
+
+focus = {
+id = JMG_get_intelligence_service
+icon = GFX_goal_unknown
+cost = 5
+prerequisite = {
+focus = JMG_plan_black_devil
+}
+x = 12
+y = 12
+}
+
+focus = {
+id = JMG_throw_a_pig
+icon = GFX_goal_unknown
+cost = 7
+prerequisite = {
+focus = JMG_make_devers_groups
+}
+x = 10
+y = 13
+}
+
+focus = {
+id = JMG_inspire_victory
+icon = GFX_goal_unknown
+cost = 7
+prerequisite = {
+focus = JMG_make_devers_groups
+}
+x = 12
+y = 13 
+}
+
+focus = {
+id = JMG_peace_friendship_annexation
+icon = GFX_goal_unknown
+cost = 7
+prerequisite = {
+focus = JMG_throw_a_pig
+focus = JMG_inspire_victory
+}
+x = 11
+y = 14
+}
+
+focus = {
+id = JMG_return
+icon = GFX_goal_unknown
+cost = 10
+prerequisite = {
+focus = JMG_peace_friendship_annexation
+focus = JMG_peace_friendship_jeymaygone
+}
+x = 9
+y = 15
+}
+
+focus = {
+id = JMG_make_new_inf
+icon = GFX_goal_unknown
+cost = 12
+prerequisite = {
+focus = JMG_return
+}
+x = 7
+y = 16
+}
+
+focus = {
+id = JMG_green_fortress
+icon = GFX_goal_unknown
+cost = 10
+prerequisite = {
+focus = JMG_return
+}
+x = 9
+y = 16
+}
+
+focus = {
+id = JMG_take_green_army
+icon = GFX_goal_unknown
+cost = 10
+prerequisite = {
+focus = JMG_return
+}
+x = 11
+y = 16
+}
+
+##################
+#забив с фортуной#
+##################
+
+focus = {
+id = JMG_big_red_evil
+icon = GFX_goal_unknown
+cost = 10
+prerequisite = {
+focus = JMG_lotus
+}
+x = 20
+y = 8
+}
+
+focus = {
+id = JMG_jey_line
+icon = GFX_goal_unknown
+cost = 10
+prerequisite = {
+focus = JMG_big_red_evil
+}
+x = 17
+y = 9
+}
+
+focus = {
+id = JMG_mobilisation
+icon = GFX_goal_unknown
+cost = 10
+prerequisite = {
+focus = JMG_big_red_evil
+}
+x = 20
+y = 9
+}
+
+focus = {
+id = JMG_red_dogs
+icon = GFX_goal_unknown
+cost = 10
+prerequisite = {
+focus = JMG_big_red_evil
+}
+x = 23
+y = 9
+}
+
+focus = {
+id = JMG_inspire_the_masses
+icon = GFX_goal_unknown
+cost = 5
+prerequisite = {
+focus = JMG_jey_line
+}
+prerequisite = {
+focus = JMG_mobilisation
+}
+x = 18
+y = 10
+}
+
+focus = {
+id = JMG_deal_with_olga
+icon = GFX_goal_unknown
+cost = 12
+prerequisite = {
+focus = JMG_jey_line
+}
+x = 17
+y = 11
+}
+
+focus = {
+id = JMG_converting
+icon = GFX_goal_unknown
+cost = 10
+prerequisite = {
+focus = JMG_mobilisation
+}
+prerequisite = {
+focus = JMG_red_dogs
+}
+x = 22
+y = 10
+}
+
+focus = {
+id = JMG_find_resistance
+icon = GFX_goal_unknown
+cost = 10
+prerequisite = {
+focus = JMG_red_dogs
+}
+x = 23
+y = 11
+}
+
+focus = {
+id = JMG_great_battle
+icon = GFX_goal_unknown
+cost = 12
+prerequisite = {
+focus = JMG_find_resistance
+}
+prerequisite = {
+focus = JMG_deal_with_olga
+}
+x = 20
+y = 12
+}
+
+#########################
+#перекат в народничество#
+#########################
+
+focus = {
+id = JMG_to_hell_with_all_of_it
+icon = GFX_goal_unknown
+cost = 7
+x = 28
+y = 6
+}
+
+focus = {
+id = JMG_why_we_fight
+icon = GFX_goal_unknown
+cost = 10
+prerequisite = {
+focus = JMG_to_hell_with_all_of_it
+}
+x = 26
+y = 7
+}
+
+focus = {
+id = JMG_contact_with_reds
+icon = GFX_goal_unknown
+cost = 8
+prerequisite = {
+focus = JMG_to_hell_with_all_of_it
+}
+x = 28
+y = 7
+}
+
+focus = {
+id = JMG_demonstration
+icon = GFX_goal_unknown
+cost = 10
+prerequisite = {
+focus = JMG_to_hell_with_all_of_it
+}
+x = 30
+y = 7
+}
+
+focus = {
+id = JMG_lets_go
+cost = 12
+prerequisite = {
+focus = JMG_why_we_fight
+}
+prerequisite = {
+focus = JMG_contact_with_reds
+}
+prerequisite = {
+focus = JMG_demonstration
+}
+x = 28
+y = 8 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}	
